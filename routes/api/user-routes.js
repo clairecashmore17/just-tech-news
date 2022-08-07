@@ -80,7 +80,7 @@ router.post('/login', (req, res) => {
 // PUT /api/users/1
 router.put('/:id', (req,res) => {
 
-    //expects {username: 'Claire2', email: 'cbear5@live.com2', password: '2assword1234'}
+    //expects {username: 'Claire2', email: 'cbear5@live.com2', password: '9assword1234'}
     
     //if req.body has exact key/value paris to match the mdoel, you can just use req.body instead
     /*
