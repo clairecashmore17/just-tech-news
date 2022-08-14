@@ -8,10 +8,11 @@ let sequelize;
 if(process.env.JAWSDB_URL){
     sequelize = new Sequilize(process.env.JAWSDB_URL);
 }else {
-const sequelize = new Sequilize(process.env.DB_NAME, process.env.DB_USR, process.env.DB_PASSWORD, {
+sequelize = new Sequilize(process.env.DB_NAME, process.env.DB_USR, process.env.DB_PASSWORD, {
     host: 'localhost',
     dialect: 'mysql',
     port: '3306'
 });
 }
+
 module.exports = sequelize;
