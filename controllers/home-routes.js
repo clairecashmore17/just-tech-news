@@ -4,6 +4,7 @@ const sequelize = require("sequelize");
 const { Post, Comment, User } = require("../models");
 
 router.get("/", (req, res) => {
+  console.log(req.session);
   Post.findAll({
     attributes: [
       "id",
@@ -60,4 +61,24 @@ router.get("/", (req, res) => {
   //   });
 });
 
+// route to allow a user to login
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+
+  res.render("login");
+});
+
+//route to logout of session
+router.post("/logout", (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
 module.exports = router;
