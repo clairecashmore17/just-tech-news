@@ -4,6 +4,10 @@ const apiRoutes = require("./api");
 
 const homeRoutes = require("./home-routes.js");
 
+const dashboardRoutes = require("./dashboard-routes.js");
+
+router.use("/dashboard", dashboardRoutes);
+
 router.use("/", homeRoutes);
 
 //we will send any requests make with /api to the apiRoutes file
