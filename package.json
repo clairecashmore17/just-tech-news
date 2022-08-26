@@ -27,7 +27,10 @@
     "express-session": "^1.17.3",
     "mysql2": "^2.3.3",
     "prettier": "^2.7.1",
-    "sequelize": "^6.21.3"
+    "sequelize": "^6.21.3",
+    "upload": "^1.1.1",
+    "upload-js": "^1.48.21",
+    "uploader": "^1.48.0"
   },
   "devDependencies": {
     "jest": "^28.1.3"

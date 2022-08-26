@@ -10,6 +10,8 @@ const hbs = exphbs.create({ helpers });
 //adding our session objects
 const session = require("express-session");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
+// Ignore if installed via a script tag.
+const { Uploader } = require("uploader");
 
 const sess = {
   secret: "Super secret secret",
